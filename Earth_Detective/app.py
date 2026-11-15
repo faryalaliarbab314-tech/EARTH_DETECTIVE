@@ -69,7 +69,6 @@ total = int(difference.count())
 
 # SIDEBAR
 with st.sidebar:
-    st.title("🌍 Earth Detective")
     page = option_menu(
         menu_title="Explore the project",
         options=["Home", "Temperature Maps", "Change Detection", "Hotspots", "Statistics", "Conclusion"],
