@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+from pathlib import Path
 
 st.set_page_config(
     page_title="Earth Detective | Pakistan",
@@ -12,8 +13,11 @@ st.set_page_config(
     layout="wide"
 )
 
-FILE1 = "data/new_data_2000.nc"
-FILE2 = "data/new_data_2011.nc"
+BASE_DIR = Path(__file__).resolve().parent
+
+FILE1 = BASE_DIR / "data" / "new_data_2000.nc"
+FILE2 = BASE_DIR / "data" / "new_data_2011.nc"
+
 VARIABLE = "M2T1NXSLV_5_12_4_T2M"
 
 @st.cache_data
