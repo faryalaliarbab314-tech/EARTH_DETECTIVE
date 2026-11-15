@@ -23,10 +23,6 @@ FILE2 = BASE_DIR / "data" / "new_data_2011.nc"
 VARIABLE = "M2T1NXSLV_5_12_4_T2M"
 
 
-
-threshold = st.slider("Highlight temperature change greater than (± °C):", 0.0, 1.0, 0.2, 0.05)
-
-
 @st.cache_data
 def load_data(path):
     with xr.open_dataset(path) as ds:
